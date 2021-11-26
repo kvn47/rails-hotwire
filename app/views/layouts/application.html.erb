@@ -10,9 +10,21 @@
     <%= stimulus_include_tags %>
     <%= javascript_include_tag "turbo", type: "module-shim" %>
     <%= yield :head %>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.3.3/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+    <%= javascript_pack_tag 'quasar' %>
   </head>
 
   <body>
+    <div id="q-app">
+      <app/>
+    </div>
     <%= yield %>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.3.3/dist/quasar.umd.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.3.3/dist/lang/ru.umd.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.3.3/dist/icon-set/svg-mdi-v6.umd.prod.js"></script>
   </body>
 </html>
